@@ -3,7 +3,7 @@ import streamlit as st
 
 def get_poker_suggestions(game_type, num_players, pot_size, community_cards, position, opp_action, opp_tendency, hand_strength, stack_size, table_dynamics, bet_size):
     # Initialize OpenAI API key
-    openai.api_key = "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"
+    openai.api_key = os.getenv("OPEN_API_KEY")
 
     # Generate text using OpenAI GPT-3
     prompt = f"As an expert poker player, In a {game_type} game with {num_players} players, the pot size is {pot_size} and the community cards are {community_cards}. You are in {position} position and your opponents are playing {opp_action}. They tend to play {opp_tendency}. Your stack size is {stack_size} and your hand strength is {hand_strength}. The table dynamics are {table_dynamics} with bet of {bet_size}. What are the best actions you will take if you playing aggressive. Give top 2 actions in value 1-10 with 10 being the best?"
