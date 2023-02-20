@@ -1,5 +1,6 @@
 import openai
 import streamlit as st
+import os
 
 def get_poker_suggestions(game_type, num_players, pot_size, community_cards, position, opp_action, opp_tendency, hand_strength, stack_size, table_dynamics, bet_size):
     # Initialize OpenAI API key
